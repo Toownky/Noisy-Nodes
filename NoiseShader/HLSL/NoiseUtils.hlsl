@@ -47,6 +47,10 @@ float3 taylorInvSqrt(float3 r)
     return 1.79284291400159 - 0.85373472095314 * r;
 }
 
+float4 fade(float4 t) {
+    return t*t*t*(t*(t*6.0-15.0)+ 10.0);
+}
+
 float3 fade(float3 t) {
   return t*t*t*(t*(t*6.0-15.0)+10.0);
 }
